@@ -1,0 +1,318 @@
+@font-face {
+    font-family: "my_font";
+    src:local("Heiti TC"), local("微軟正黑體"), local("Microsoft JhengHei");
+    unicode-range: U+4E00-9FFF, U+2E80-2EFF, U+0020-007F;
+}
+@font-face {
+    font-family: 'my_font';
+    src:url(../font/Bahnschrift.TTF);
+    unicode-range: U+0020-007F;
+}
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,
+center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+main {
+    display: block;
+}
+ol,ul {
+    list-style: none;
+}
+blockquote,q {
+    quotes: none;
+}
+blockquote:before,blockquote:after,q:before,q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+button {
+    font-family: "my_font";
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0px;
+}
+select,input {
+    font-family: "my_font";
+    outline: none;
+}
+html {
+    font-family: "my_font";
+    background: white;
+    box-sizing: border-box;
+    margin: 0px auto;
+    // user-select: none;
+}
+a:link {
+    text-decoration: none;
+}
+
+//content
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #050d32;
+    
+    body {
+        min-width: 1100px;
+        height: auto;
+        overflow: hidden;
+
+        main {
+            width: 100%;
+            height: 1000px;
+            overflow: hidden;
+            position: relative;
+
+            .center {
+                width: 1100px;
+                height: 100%;
+                margin: 0 auto;
+                position: relative;
+
+                .top {
+                    width: 100%;
+                    height: 50%;
+                    position: relative;
+
+                    .sparkel {
+                        width: 1920px;
+                        height: 486px;
+                        background: url(../img/sparkel.png) no-repeat;
+                        background-size: contain;
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        z-index: 1;
+                        opacity: 0;
+                        animation: keep 3s 0.4s ease-in-out ;
+                    }
+    
+                    .sparke2 {
+                        width: 1920px;
+                        height: 486px;
+                        background: url(../img/sparkel.png) no-repeat;
+                        background-size: contain;
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        z-index: 1;
+                        opacity: 0;
+                        animation: keep 5s 5s ease-in-out infinite;
+                    }
+    
+                    .logo {
+                        width: 573px;
+                        height: 127px;
+                        background: url(../img/LOGO.png) no-repeat center;
+                        background-size: contain;
+                        z-index: 100;
+                        position: absolute;
+                        top: 56px;
+                        left: 26px;
+                    }
+    
+                    .inputBox {
+                        width: auto;
+                        height: auto;
+                        display: flex;
+                        position: absolute;
+                        top: 222px;
+                        left: 24px;
+                        z-index: 100;
+
+                        .input {
+                            width: auto;
+    
+                            label {
+                                display: flex;
+                                align-items: center;
+                                margin: 0 24px 23px 10px;
+    
+                                p {
+                                    color: #ffffff;
+                                    font-size: 24px;
+                                    font-weight: bold;
+                                    letter-spacing: 2px;
+                                    margin: 0 20px 0 0;
+                                }
+    
+                                input {
+                                    width: 264px;
+                                    height: 40px;
+                                    background: #eff7ff;
+                                    border: 3px solid transparent;
+                                    font-size: 25px;
+                                    padding: 0 10px;
+                                    box-shadow: 2px 2px 10px rgb(0, 0, 0, 90%);
+
+                                    &:focus {
+                                        border: 3px solid #15c5ff;
+                                    }
+                                }
+    
+                                &:last-child {
+                                    margin:  0 20px 0 10px;
+                                }
+                            }
+                        }
+    
+                        button {
+                            width: 189px;
+                            height: auto;
+                            background: linear-gradient(to left, #ff34fd 0%, #15c5ff 100%);
+                            border-radius: 5px;
+                            border: 2px solid transparent transparent;
+                            box-shadow: 2px 2px 10px rgb(0, 0, 0, 90%);
+                            color: #ffffff;
+                            font-size: 35px;
+                            font-weight: bold;
+    
+                            &:hover,&:active,&.active {
+                                background: linear-gradient(to right, #0825a3 0%, #e4007d 100%);
+                                text-shadow: 0px -0px 5px rgb(255, 255, 255, 90%);
+                                border: 2px solid #15c5ff;
+                                box-shadow: 2px 2px 15px rgb(0, 0, 0, 100%);
+                                transform: scale(0.9);
+                                transition: 0.1s;
+                            }
+                        }
+                    }
+    
+                    .unionLogo {
+                        width: 266px;
+                        height: 47px;
+                        background: url(../img/union.png) no-repeat center;
+                        background-size: contain;
+                        position: absolute;
+                        top: 363px;
+                        left: 107px;
+                        z-index: 100;
+                    }
+                }
+                
+                .bottom {
+                    width: 100%;
+                    height: 50%;
+                    position: relative;
+                    
+                    .light1 {
+                        width: 1919px;
+                        height: 810px;
+                        background: url(../img/light1_ori.png) no-repeat;
+                        background-size: contain;
+                        position: absolute;
+                        bottom: 191px;
+                        left: -411px;
+                        opacity: 0;
+                        animation: fadeIn 0.2s ease-in-out forwards;
+                    }
+    
+                    .light2 {
+                        width: 1920px;
+                        height: 1000px;
+                        background: url(../img/light2.png) no-repeat;
+                        background-size: contain;
+                        position: absolute;
+                        bottom: 0;
+                        left: -410px;
+                        z-index: 6;
+                        opacity: 0;
+                        animation: fadeIn2 0.5s 0.2s ease-in-out forwards;
+                    }
+    
+                    .mainObject {
+                        width: 1446px;
+                        height: 849px;
+                        background: url(../img/mainObject.png) no-repeat;
+                        background-size: contain;
+                        position: absolute;
+                        bottom: 0;
+                        left: 64px;
+                        z-index: 4;
+                        opacity: 0;
+                        animation: show 0.4s 0.3s ease-in-out forwards;
+                    }
+                }
+            }
+
+            //背景
+            .bg {
+                width: 100%;
+                min-width: 1100px;
+                height: 100%;
+                background: url(../img/BG.png) no-repeat top center;
+                position: absolute;
+                top: 0;
+                z-index: -999;
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        bottom: 494px;
+        left: -2000px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 191px;
+        left: -411px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes show {
+    0% {
+        bottom: -670px;
+        left: 1541px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 0;
+        left: 64px;
+        opacity: 1;
+    }
+}
+
+@keyframes keep {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
